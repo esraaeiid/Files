@@ -10,12 +10,26 @@ import UIKit
 
 class TypeVC: UIViewController {
 
+ 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("inital commit")
     }
-
-
+    @IBAction func TitleClicked(_ sender: Any) {
+        performSegue(withIdentifier: "TypeSegue", sender: sender)
+    }
+    @IBAction func DockClicke(_ sender: Any) {
+        performSegue(withIdentifier: "TypeSegue", sender: sender)
+    }
+    @IBAction func PortClicked(_ sender: Any) {
+        performSegue(withIdentifier: "TypeSegue", sender: sender)
+    }
+    
+  
+        
+    
+  
     
 }
 

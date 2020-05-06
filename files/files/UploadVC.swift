@@ -10,10 +10,14 @@ import UIKit
 
 class UploadVC: UIViewController {
 
+    @IBOutlet weak var ImageSelected: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
+    }
+    @IBAction func UploadClicked(_ sender: Any) {
     }
     
 
