@@ -45,6 +45,8 @@
 	<string>Main</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allow to open gallery please</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow to use camera</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

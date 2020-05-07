@@ -217,17 +217,30 @@
                                 <state key="normal" title="Scan">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="ScanBtnClicked:" destination="nWu-y3-VlY" eventType="touchUpInside" id="7XV-Fs-bk0"/>
+                                </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XSr-sB-z1g">
+                                <rect key="frame" x="0.0" y="88" width="414" height="445"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="wAk-VB-ezZ" firstAttribute="leading" secondItem="LkF-xM-qDr" secondAttribute="leading" id="C4n-2P-DEP"/>
+                            <constraint firstItem="XSr-sB-z1g" firstAttribute="top" secondItem="LkF-xM-qDr" secondAttribute="top" id="Mbz-7z-ACQ"/>
                             <constraint firstItem="wAk-VB-ezZ" firstAttribute="trailing" secondItem="LkF-xM-qDr" secondAttribute="trailing" id="V0o-x6-te4"/>
                             <constraint firstItem="LkF-xM-qDr" firstAttribute="bottom" secondItem="wAk-VB-ezZ" secondAttribute="bottom" constant="27" id="WxT-HG-7hK"/>
+                            <constraint firstItem="XSr-sB-z1g" firstAttribute="leading" secondItem="LkF-xM-qDr" secondAttribute="leading" id="ZLc-RR-uyq"/>
+                            <constraint firstItem="wAk-VB-ezZ" firstAttribute="top" secondItem="XSr-sB-z1g" secondAttribute="bottom" constant="257" id="vWm-CG-lcV"/>
+                            <constraint firstItem="XSr-sB-z1g" firstAttribute="trailing" secondItem="LkF-xM-qDr" secondAttribute="trailing" id="w9T-4u-FKw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LkF-xM-qDr"/>
                     </view>
                     <navigationItem key="navigationItem" id="wFS-rC-pGx"/>
+                    <connections>
+                        <outlet property="imageSelected" destination="XSr-sB-z1g" id="GTh-12-Gl3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3MO-42-pqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
