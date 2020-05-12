@@ -9,42 +9,29 @@
 import UIKit
 
 class Menu: UIViewController {
-
-     let Buton : UIButton = {
-         let newButn = UIButton(type: .system )
-         newButn.backgroundColor = .white
-         newButn.setTitle("Preview", for: .normal)
-//         newButn.addTarget(self, action: #selector(ShowView), for: .touchUpInside)
-         newButn.translatesAutoresizingMaskIntoConstraints = false
-
-         
-         
-         return newButn
-     }()
     
-     override func viewDidLoad() {
-         super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.backgroundColor = .white
+        addBottomSheetView()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
-         navigationController?.navigationBar.backgroundColor = .gray
-         view.backgroundColor = .white
-         view.addSubview(Buton)
-         Buton.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-         Buton.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-         Buton.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-         Buton.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: 40).isActive = true
 
-              
-     }
-     
-//      @objc func ShowView() {
-//
-//
-//         let vc = Menu()
-//                vc.modalTransitionStyle   = .crossDissolve
-//                vc.modalPresentationStyle = .popover
-//                self.present(vc, animated: true, completion: nil)
-//
-//
-//     }
+    func addBottomSheetView() {
+
+        let bottomSheetVC = BottomSheetVC()
+        self.addChild(bottomSheetVC)
+        self.view.addSubview(bottomSheetVC.view)
+        bottomSheetVC.didMove(toParent: self)
+        
+        let height = view.frame.height
+        let width  = view.frame.width
+        
+        bottomSheetVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
+    }
 
 }
