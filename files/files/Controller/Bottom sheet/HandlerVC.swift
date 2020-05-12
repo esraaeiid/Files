@@ -15,7 +15,7 @@ class HandlerVC: UIViewController {
     var handlerLine:UIView = {
           var handleView = UIView()
         let handlerColor = UIColor.black
-          handleView.backgroundColor = handlerColor
+        handleView.backgroundColor = .lightGray
           handleView.translatesAutoresizingMaskIntoConstraints = false
           handleView.layer.cornerRadius = 4.0
           return handleView
@@ -23,15 +23,16 @@ class HandlerVC: UIViewController {
     
     var titleLbl:UILabel = {
         var titleLabel = UILabel()
-      titleLabel.text = " Attach A File "
+      titleLabel.text = "  Attach A File "
       titleLabel.textColor = .black
-     titleLabel.font = UIFont.systemFont(ofSize: 30)
+     titleLabel.font = UIFont.systemFont(ofSize: 19)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.backgroundColor = .white
         return titleLabel
     }()
     
       override func viewDidLoad() {
           super.viewDidLoad()
-          self.view.backgroundColor = UIColor.yellow
           self.view.addSubview(handlerLine)
         self.view.addSubview(titleLbl)
           self.view.layer.cornerRadius = 9.0
@@ -49,8 +50,8 @@ class HandlerVC: UIViewController {
         
         self.titleLbl.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         self.titleLbl.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 25).isActive = true
-        self.titleLbl.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        self.titleLbl.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        self.titleLbl.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        self.titleLbl.widthAnchor.constraint(equalToConstant: 125).isActive = true
       }
 
 }

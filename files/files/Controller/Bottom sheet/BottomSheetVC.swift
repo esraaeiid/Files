@@ -20,7 +20,7 @@ class BottomSheetVC: UIViewController {
     let handlerVC:HandlerVC = {
         let vc = HandlerVC()
         vc.view.translatesAutoresizingMaskIntoConstraints = false
-        vc.view.backgroundColor = .green
+        vc.view.backgroundColor = .white
         return vc
     }()
     
