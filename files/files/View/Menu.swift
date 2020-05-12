@@ -12,7 +12,7 @@ class Menu: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .lightGray
         addBottomSheetView()
     }
     

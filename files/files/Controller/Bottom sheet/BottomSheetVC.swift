@@ -67,7 +67,7 @@ class BottomSheetVC: UIViewController {
         heightConstraint.isActive = true
         //FIXME: Height constraints.
         //should stuck to bottom sheet height anchor
-        handlerVC.view.heightAnchor.constraint(equalToConstant: 68).isActive = true
+        handlerVC.view.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0).isActive = true
         handlerVC.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         handlerVC.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         HandlerBottomConstraint.isActive = true
@@ -79,10 +79,8 @@ class BottomSheetVC: UIViewController {
         
         
         
-        
-        //          let screenSize = UIScreen.main.bounds
         let heightValue = view.frame.height - 170
-        //            view.frame.maxY
+    
         
         self.view.layoutIfNeeded()
         UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
