@@ -65,8 +65,9 @@ class BottomSheetVC: UIViewController {
         containerVC.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         containerVC.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         heightConstraint.isActive = true
-        
-        handlerVC.view.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        //FIXME: Height constraints.
+        //should stuck to bottom sheet height anchor
+        handlerVC.view.heightAnchor.constraint(equalToConstant: 68).isActive = true
         handlerVC.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         handlerVC.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         HandlerBottomConstraint.isActive = true

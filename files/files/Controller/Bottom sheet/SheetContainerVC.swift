@@ -15,7 +15,7 @@ class SheetContainerVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.layer.cornerRadius = 8.0
-        self.view.backgroundColor = UIColor.lightGray
+        self.view.backgroundColor = UIColor.red
                  
     }
 
