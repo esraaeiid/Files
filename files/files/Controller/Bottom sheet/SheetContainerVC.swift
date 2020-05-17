@@ -19,7 +19,6 @@ class SheetContainerVC: UIViewController{
     
         setupViews()
         setupConstraints()
-                 
     }
     
     let Cancel : UIButton = {
@@ -42,7 +41,7 @@ class SheetContainerVC: UIViewController{
 //        self.present(vc, animated: true, completion: nil)
     }
     
-    fileprivate let stackView: UIStackView = {
+     let stackView: UIStackView = {
           let stack = UIStackView()
                stack.distribution = UIStackView.Distribution.fillProportionally
                stack.alignment = UIStackView.Alignment.center
@@ -88,14 +87,15 @@ class SheetContainerVC: UIViewController{
 
     func setupConstraints(){
 
+        
+        
 
         stackView.anchor(top: self.view.topAnchor, leading: self.view.leadingAnchor, bottom: nil, trailing: self.view.trailingAnchor, padding: .init(top: 10, left: 10, bottom: 10, right: 10))
         stackView.heightAnchor.constraint(equalToConstant: 90).isActive = true
 
 
-        Cancel.anchor(top: stackView.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 10, left: 30, bottom: 10, right: 30), size: .init(width: 70, height: 40))
-        
-        Cancel.centerXInSuperview()
+        Cancel.anchor(top: stackView.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 10, left: 30, bottom: 10, right: 30), size: .init(width: 100, height: 40))
+        Cancel.centerXTo(view.centerXAnchor)
         
         
     }
