@@ -6,9 +6,8 @@
 //  Copyright © 2020 Esraa Eid. All rights reserved.
 //
 
-import Foundation
-import UIKit
 
+import UIKit
 
 class HandlerVC: UIViewController {
     
@@ -23,9 +22,9 @@ class HandlerVC: UIViewController {
     
     var titleLbl:UILabel = {
         var titleLabel = UILabel()
-        titleLabel.text = "  Attach A File "
+        titleLabel.text = " "
         titleLabel.textColor = .black
-        titleLabel.font = UIFont.systemFont(ofSize: 19)
+        titleLabel.font = .boldSystemFont(ofSize: 20)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.backgroundColor = .white
         return titleLabel
@@ -36,6 +35,10 @@ class HandlerVC: UIViewController {
         self.view.layer.cornerRadius = 5.0
         setupConstraints()
     }
+    
+
+        
+    
     
     func setupConstraints(){
         

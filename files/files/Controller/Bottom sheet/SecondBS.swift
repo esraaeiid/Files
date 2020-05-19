@@ -1,33 +1,31 @@
 //
-//  ViewController.swift
+//  SecondBS.swift
 //  files
 //
-//  Created by Esraa Eid on 5/4/20.
+//  Created by Esraa Eid on 5/19/20.
 //  Copyright © 2020 Esraa Eid. All rights reserved.
-// title, dock receiept, port stamp dock receiept
+//
 
 
 import UIKit
 
-class BottomSheetVC: UIViewController {
+class SecondBS: UIViewController {
     
-    let containerVC:SheetContainerVC = {
-        let vc = SheetContainerVC()
+    let containerVC: SecBottomSheet = {
+        let vc = SecBottomSheet()
         vc.view.translatesAutoresizingMaskIntoConstraints = false
         return vc
     }()
     
     let handlerVC:HandlerVC = {
         let vc = HandlerVC()
-        vc.titleLbl.text = " Attach A File "
+        vc.titleLbl.text = " Title File "
         vc.view.translatesAutoresizingMaskIntoConstraints = false
         vc.view.backgroundColor = .white
         return vc
     }()
-    //fisrt sheet
-    var fullView: CGFloat {
-         return UIScreen.main.bounds.height - 325
-    }
+    
+    let fullView: CGFloat = 100
     
     var partialView: CGFloat {
         return UIScreen.main.bounds.height - 325
@@ -131,3 +129,4 @@ class BottomSheetVC: UIViewController {
     
     
 }
+
